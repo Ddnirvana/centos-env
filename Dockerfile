@@ -20,6 +20,7 @@ RUN update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.7 70 && update
 
 #RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+RUN apt-get install -y python python3;
 
 USER stu
 
