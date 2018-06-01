@@ -18,9 +18,10 @@ RUN apt-get install -y g++-4.7 gcc-4.7;
 
 RUN update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.7 70 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 50 && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 50 && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 50;
 
-#RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 RUN apt-get install -y python python3;
+
+RUN apt-get install -y zsh;
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 USER stu
 
