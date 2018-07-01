@@ -20,7 +20,10 @@ RUN update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.7 70 && update
 
 RUN apt-get install -y python python3;
 
-RUN apt-get install -y zsh ctags sloccount;
+RUN apt-get install -y zsh ctags sloccount cmake;
+
+RUN apt-get install -y clang-5 python-pip;
+
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 USER stu
